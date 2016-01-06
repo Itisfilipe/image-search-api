@@ -26,7 +26,7 @@ function ImageHandler() {
           'q': query
         },
         headers: {
-          'Authorization': 'Client-ID c9cf43252d5914f'
+          'Authorization': 'Client-ID ' + process.env.IMGUR_API
         },
         dataType: 'json'
       })
@@ -34,13 +34,21 @@ function ImageHandler() {
         // Get the response raw body
         var body = response.getBody();
         var data = body.data.slice(0, offset);
+        var parsedData = [];
+        data.forEach(function(element) {
+          parsedData.push({
+            'url': element.link,
+            'snippet': element.title,
+            'context': 'http://imgur.com/' + element.id
+          });
+        });
         if (body.success) {
           // console.log(data.length);
           var log = new LogModel({
             term: query,
           });
           log.save();
-          res.send(data);
+          res.send(parsedData);
         }
       });
 
