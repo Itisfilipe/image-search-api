@@ -19,7 +19,6 @@
   "dependencies": {
     "dotenv": "^1.2.0",
     "express": "^4.13.3",
-    "hashids": "^1.0.2",
     "mongoose": "^4.3.4",
     "requestify": "^0.1.17"
   }
