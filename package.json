@@ -1,0 +1,26 @@
+{
+  "name": "image-search-api",
+  "version": "1.0.1",
+  "description": "Image Search Layer made for Free Code Camp Curriculum.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "MEAN",
+    "MongoDB",
+    "Express",
+    "Angular",
+    "Node",
+    "javascript"
+  ],
+  "author": "Filipe T. Amaral",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "express": "^4.13.3",
+    "hashids": "^1.0.2",
+    "mongoose": "^4.3.4",
+    "requestify": "^0.1.17"
+  }
+}
