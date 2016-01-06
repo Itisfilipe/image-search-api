@@ -55,7 +55,11 @@ function ImageHandler() {
   };
 
   this.getLogs = function(req, res) {
-    LogModel.find().sort('-when').limit(10).select('term when').exec(function(err, docs) {
+    LogModel.find()
+    .sort('-when')
+    .limit(10)
+    .select('-_id term when')
+    .exec(function(err, docs) {
       if (err) {
         throw err;
       } else {

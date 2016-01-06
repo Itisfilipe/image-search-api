@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>URL Shortener API</title>
-  </head>
-  <body>
-    <h1>URL Shortener <small>Created for <a href="http://freecodecamp.com">Free Code Camp</a></small></h1>
-    <h2>User stories:</h2>
-    <ol>
-      <li>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
-      <li>When I visit that shortened URL, it will redirect me to my original link.</li>
-    </ol>
-    <h2>Example creation usage:</h2>
-<p>
-  https://url-shortener-xfilipe.herokuapp.com/new/https://www.google.com
-</p>
-<p>
-  https://url-shortener-xfilipe.herokuapp.com/new/http://freecodecamp.com/news
-</p>
-<h2>Example creation output:</h2>
-<p>
-  {
-  originalURL: "http://freecodecamp.com/news",
-  shortUrl: "http://url-shortener-xfilipe.herokuapp.com/KXE"
-  }
-</p>
 
-<h2>Usage:</h2>
-http://url-shortener-xfilipe.herokuapp.com/KXE
-<h2>Will redirect to:</h2>
-http://freecodecamp.com/news
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Image Search API</title>
+</head>
+
+<body>
+  <h1>Image Search API
+    <small>Created for <a href="http://freecodecamp.com">Free Code Camp</a></small>
+  </h1>
+  <h2>User stories:</h2>
+  <ol>
+    <li>I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</li>
+    <li>I can paginate through the responses by adding a ?offset=2 parameter to the URL.</li>
+    <li>I can get a list of the most recently submitted search strings.</li>
+  </ol>
+
+  <h2>Usage:</h2>
+  https://immense-earth-4759.herokuapp.com/api/imagesearch/cats%20funny?offset=2
+  <h2>Output:</h2>
+  [
+{
+url: "http://i.imgur.com/T9hRUXL.png",
+snippet: "What happened to just funny shit and cats?",
+context: "http://imgur.com/T9hRUXL"
+},
+{
+url: "http://imgur.com/a/LWssZ",
+snippet: "Cats are funny",
+context: "http://imgur.com/LWssZ"
+}
+]
+  <h2>Usage:</h2>
+  https://immense-earth-4759.herokuapp.com/api/latest/imagesearch/
+  <h2>Output:</h2>
+  [
+{
+_id: "568c85cc5733aa0300221c89",
+term: "cats funny",
+when: "2016-01-06T03:11:08.419Z"
+},
+{
+_id: "568c85945733aa0300221c88",
+term: "cats funny",
+when: "2016-01-06T03:10:12.366Z"
+},
+{
+_id: "568c85855733aa0300221c87",
+term: "lolcats funny",
+when: "2016-01-06T03:09:57.284Z"
+},
+...
+]
+</body>
+
 </html>
