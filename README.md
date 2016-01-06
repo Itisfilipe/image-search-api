@@ -1,4 +1,4 @@
-# URL Shortener
+# Image Search API
 ## Created for [Free Code Camp](http://freecodecamp.com)
 
 ### User stories:
@@ -12,7 +12,7 @@
 https://immense-earth-4759.herokuapp.com/api/imagesearch/cats%20funny?offset=2
 ```
 ###Output:
-```
+```javascript
 [
 {
 url: "http://i.imgur.com/T9hRUXL.png",
@@ -31,7 +31,7 @@ context: "http://imgur.com/LWssZ"
 https://immense-earth-4759.herokuapp.com/api/latest/imagesearch/
 ```
 ###Output:
-```
+```javascript
 [
 {
 term: "cats funny",
