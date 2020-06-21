@@ -1,17 +1,10 @@
 # Image Search API
-## Created for [Free Code Camp](http://freecodecamp.com)
-
-### User stories:
-
-  1. I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
-  2. I can paginate through the responses by adding a ?offset=2 parameter to the URL.
-  3. I can get a list of the most recently submitted search strings.
 
 ### Usage:
 ```
 https://immense-earth-4759.herokuapp.com/api/imagesearch/cats%20funny?offset=2
 ```
-###Output:
+### Output:
 ```javascript
 [
 {
@@ -30,7 +23,7 @@ context: "http://imgur.com/LWssZ"
 ```
 https://immense-earth-4759.herokuapp.com/api/latest/imagesearch/
 ```
-###Output:
+### Output:
 ```javascript
 [
 {
